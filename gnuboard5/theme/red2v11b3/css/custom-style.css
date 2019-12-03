@@ -1,0 +1,779 @@
+/*
+.content h1 {
+  color: red;
+}
+*/
+
+/*
+.search-toggle:hover {
+  color: red;
+}
+*/
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/open-sans-v16-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+       url('../fonts/open-sans-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v16-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/open-sans-v16-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans Bold'), local('OpenSans-Bold'),
+       url('../fonts/open-sans-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v16-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v16-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v16-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v16-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-800 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/open-sans-v16-latin-800.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
+       url('../fonts/open-sans-v16-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v16-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v16-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v16-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v16-latin-800.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+
+
+/* nanum-gothic-regular - korean_latin */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/nanum-gothic-v16-korean_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('NanumGothic'),
+       url('../fonts/nanum-gothic-v16-korean_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/nanum-gothic-v16-korean_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/nanum-gothic-v16-korean_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/nanum-gothic-v16-korean_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/nanum-gothic-v16-korean_latin-regular.svg#NanumGothic') format('svg'); /* Legacy iOS */
+}
+/* nanum-gothic-700 - korean_latin */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/nanum-gothic-v16-korean_latin-700.eot'); /* IE9 Compat Modes */
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'),
+       url('../fonts/nanum-gothic-v16-korean_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/nanum-gothic-v16-korean_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/nanum-gothic-v16-korean_latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/nanum-gothic-v16-korean_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/nanum-gothic-v16-korean_latin-700.svg#NanumGothic') format('svg'); /* Legacy iOS */
+}
+/* nanum-gothic-800 - korean_latin */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/nanum-gothic-v16-korean_latin-800.eot'); /* IE9 Compat Modes */
+  src: local('NanumGothic ExtraBold'), local('NanumGothic-ExtraBold'),
+       url('../fonts/nanum-gothic-v16-korean_latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/nanum-gothic-v16-korean_latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/nanum-gothic-v16-korean_latin-800.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/nanum-gothic-v16-korean_latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/nanum-gothic-v16-korean_latin-800.svg#NanumGothic') format('svg'); /* Legacy iOS */
+}
+
+
+
+body {
+  /*font-size: 140%;*/
+  /* padding-top: 50px; */ /* 고정 메뉴 70px */
+}
+
+.header {
+  /* position: relative; */
+}
+
+
+.navbar {
+  border: 0px;
+  margin-bottom: 0px; /* 아래 마진 제거 */
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 999;
+}
+
+
+/* 모바일 토글메뉴 */
+.navbar-toggle {
+  padding: 12px 13px;
+  margin-right: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.navbar-inverse .navbar-toggle {
+  border-color: #fff;
+}
+/*
+.navbar-toggle .icon-bar:hover {
+  background-color: #fff;
+}
+*/
+.navbar-inverse .navbar-toggle:hover {
+  background-color: #2f3439; /*transparent;*/
+  border-color: #f00;
+}
+/* https://stackoverflow.com/questions/25695900/toggle-icon-bar-color-change-on-hover-using-bootstrap */
+.navbar-toggle:hover .icon-bar {
+  background-color: #f00;
+}
+
+
+/* SVG는 버그가 많아서 PNG 사용 */
+/* PNG 축소시 너무 선명해지는 버그 때문에 */
+/* IE10 이하는 사용자가 적어서 IE11부터 지원하는 SVG 쓴다 */
+.navbar-brand {
+  background-image: url("../img/svg/red2mtnk_mobile02.svg"); /* ../img/red2mtnk_small_sharp02.png */
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-position: 0px 0px;
+  padding-left: 55px; /* 65px 70px */
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: -1px;
+  font-size: 22px
+  /* font-size: 18px !important; */
+  /* image-rendering: optimizeQuality; */
+}
+.navbar-brand span {
+  font-weight: 700;
+}
+.navbar-inverse .navbar-brand {
+  color: #fff !important;
+  text-decoration: none;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #f00 !important;
+  text-decoration: none;
+}
+
+/*
+.navbar-brand span {
+  font-weight: bold;
+}
+*/
+
+/*
+.navbar-brand:focus {
+  border: 1px dashed #000;
+}
+*/
+
+
+.navbar-fixed-top .navbar-collapse {
+  max-height: none;
+}
+
+.dropdown-menu {
+  border-radius: 0px;
+}
+
+/*
+.test-box {
+  position: absolute;
+  top: 51px;
+  left: 0px;
+}
+*/
+
+.con-row-outer {
+  background-color: #f2f2f2;
+  /*padding: 20px 0px;*/ /* 모바일에서 본문 위, 아래 패딩 추가 */
+  padding: 0px;
+}
+
+.con-row {
+  /* background-color: #f8f8f8; */
+  padding: 0px;
+}
+.con-row .row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.con-row .row > .col-content,
+.con-row .row > .col-sidebar,
+.con-row .row > .col-content-inner {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.col-content-inner {
+  background-color: #fff; /* #ccd*/
+  /*height: 70vh;*/ /* 테스트 전용 */
+}
+
+
+/* 로컬 네비게이션 */
+.nav-local h2 {
+  margin: 0px;
+  padding: 6px;
+  font-weight: bolder;
+  background-color: #0081f3;
+  color: #fff;
+}
+.nav-local ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #666;
+}
+.nav-local ul a {
+  color: #fff;
+  display: block;
+  padding: 6px;
+  font-size: 16px;
+}
+.nav-local ul a:hover,
+.nav-local ul a:focus,
+.nav-local ul a:active {
+  color: #f00;
+  text-decoration: none;
+}
+.nav-local li {
+  border-bottom: 1px solid #5a5a5a;
+}
+
+
+
+/*
+.cse-search-box * {
+  box-sizing: content-box;
+}
+*/
+
+.cse-search-box {
+
+}
+
+.navbar-form .cse-keyword {
+  display: inline-block;
+  width: 200px; /* auto; */
+}
+
+.navbar-form .cse-search-button {
+  display: inline-block;
+}
+
+/*
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: red;
+}
+*/
+
+.cse-keyword {
+  border-radius: 0px;
+  padding: 6px 6px;
+  /*border-radius: 3px 0px 0px 3px;*/
+}
+.cse-search-button {
+  border-radius: 0px;
+  /*border-radius: 0px 3px 3px 0px;*/
+  color: #fff;
+  background-color: #2567FC;
+  border-color: #2567FC;
+}
+.cse-search-button:hover,
+.cse-search-button:focus,
+.cse-search-button:active {
+  color: #f00 !important;
+  background-color: #2550fc !important;
+  border-color: #2550fc;
+}
+
+
+
+/* .icon-bar Start */
+/* https://julienmelissas.com/animated-x-icon-for-the-bootstrap-navbar-toggle/ */
+
+/*
+.navbar-toggle .icon-bar {
+  width: 22px;
+  transition: all 0.2s;
+}
+.navbar-toggle .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggle .middle-bar {
+  opacity: 0;
+}
+.navbar-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+
+.navbar-toggle.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+*/
+
+/* .icon-bar End */
+
+.banner-jcwc {
+  display: none;
+}
+
+.footer {
+  text-align: center;
+  background-color: #f8f8f8; /* #f8f8f8 */
+  /* 위 마진 제거 */
+  margin-top: 0px; /* 20px */
+  /*background: linear-gradient(to bottom, yellow, red);*/
+}
+.footer .list-inline {
+  margin-top: 10px;
+}
+
+/* .footer .list-inline a */
+.footer a {
+  color: #0081f3; /* #337ab7; */
+  text-decoration: none;
+}
+.footer a:hover,
+.footer a:focus {
+  color: #f00;
+  text-decoration: none;
+}
+
+
+.header-outer {
+  display: none;
+}
+
+
+/* SNS 링크 */
+.sns-link {
+  margin: 0px auto;
+  padding: 0px;
+  list-style: none;
+  /*border: 1px solid red;*/
+  /*float: left;*/
+  width: 100%;
+}
+/*
+.sns-link:before {
+  content: "";
+  clear: both;
+  display: block;
+}
+*/
+.sns-link li {
+  display: inline-block;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  /*float: left;*/
+  margin-right: 6px;
+  border-radius: 3px;
+}
+.sns-link li a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  /*margin-right: 6px;*/
+}
+.sns-link li:hover {
+  opacity: 0.6;
+}
+.sns-link li:last-child {
+  margin-right: 0px;
+}
+.sns-link .sns-logo-twitter {
+  background-image: url(../img/sns/sns_logo_twitter.png);
+}
+.sns-link .sns-logo-facebook {
+  background-image: url(../img/sns/sns_logo_facebook.png);
+}
+.sns-link .sns-logo-naver-blog {
+  background-image: url(../img/sns/sns_logo_naver_blog.png);
+}
+.sns-link .sns-logo-youtube {
+  background-image: url(../img/sns/sns_logo_youtube.png);
+}
+.sns-link .sns-logo-discord {
+  background-image: url(../img/sns/sns_logo_discord.png);
+}
+.sns-link .sns-logo-moddb {
+  background-image: url(../img/sns/sns_logo_moddb.png);
+}
+.sns-link .sns-logo-jcwc {
+  background-image: url(../img/sns/sns_logo_jcwc.png);
+}
+
+.footer-contact {
+  margin-top: 10px;
+}
+/*
+.footer-copy a {
+  background-image: url(../img/fav/red2fav_16.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 20px;
+}
+*/
+
+/* 스크롤시 본문 패딩 추가 */
+.con-row-outer-padding {
+  padding: 50px 0px 20px 0px;
+}
+
+
+
+/* 태블릿 바로 직전 미디어 쿼리 */
+@media (max-width: 767px) {
+
+/* 모바일에서 메뉴 펼칠시 높이 제한 */
+/*
+.navbar-collapse {
+  max-height: 450px;
+}
+*/
+
+
+/* 모바일 검색창 아래로 내려가는 버그 */
+.cse-keyword {
+  position: relative;
+  top: 1px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  font-size: 1.4em; /* 2.0rem; */ /* 17px; */ /* 15px; */
+  color: #fff !important;
+  /*text-shadow: 2px 2px 3px #000;*/
+}
+/* font-size 2.0rem, 1.4em 이하는 폰트 크기 변경되는 버그 발생 */
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:active {
+  color: #f00 !important;
+}
+
+.dropdown-menu {
+  padding: 0px;
+}
+.dropdown-menu > li > a {
+  padding: 7px 20px !important;
+  font-size: 15px;
+  border-bottom: 1px solid #000;
+  color: #fff !important;
+  /*background-color: #2e2d2d;*/
+}
+/* https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Colors/Color_picker_tool */
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:active {
+  color: #f00 !important;
+}
+
+.cse-search-box {
+  border: none;
+  box-shadow: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 10px 15px 15px 15px;
+}
+
+/* 주 메뉴 아래 외곽선 제거 */
+.navbar-collapse {
+  box-shadow: none;
+}
+/* 주 메뉴 아래 마진 제거 */
+.navbar-nav {
+  margin: 7.5px -15px 0px -15px;
+}
+/* 모바일에서 주 메뉴 클릭시 화살표 뒤집힘 */
+.dropdown > a[aria-expanded="true"] .caret {
+  transform: rotate(180deg);
+}
+/* 모바일에서 주 메뉴 클릭시 굵게 */
+.dropdown > a[aria-expanded="true"] {
+  font-weight: bold;
+}
+
+
+}
+
+
+@media (min-width: 768px) {
+
+.navbar {
+  border-radius: 0px;
+}
+
+
+.navbar-nav a {
+  font-weight: bold;
+}
+.navbar-nav a:hover {
+  /*color: #f00 !important;*/
+  background-color: #2f3439 !important; /*#ccc*/
+  color: #f00 !important;
+}
+.navbar-nav > li > a {
+  font-size: 15px;
+  font-family: 'Nanum Gothic';
+  font-weight: 800;
+}
+.dropdown:hover .dropdown-toggle {
+  color: #f00; /*#333;*/
+  background-color: #2f3439; /*#ccc*/
+}
+.dropdown-menu > li > a {
+  padding: 7px 20px;
+}
+.dropdown-menu > li > a:hover {
+  background-color: #e5e5e5 !important;
+}
+
+
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+  display: block;
+  /* margin: 0; */
+}
+
+.navbar-form {
+  padding: 0px;
+}
+.navbar-form .form-control {
+  width: 115px; /*120px;*/
+}
+
+/* 태블릿부터 위 아래 패딩 */
+.con-row-outer {
+  padding: 20px 0px;
+}
+
+/* 태블릿부터 사이드바는 왼쪽, 콘텐츠는 오른쪽 */
+.con-row .row > .col-content {
+  float: right;
+  padding-left: 15px;
+}
+.con-row .row > .col-sidebar {
+  float: left;
+}
+
+/*
+.navbar-collapse .navbar-nav > li:after {
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  content: "";
+  color: #fff;
+  height: 35px;
+  border-left: 1px solid #000;
+}
+*/
+
+
+.navbar-collapse .navbar-nav > li:first-child {
+  border-left: 1px solid #000;
+}
+.navbar-collapse .navbar-nav > li {
+  border-right: 1px solid #000;
+}
+
+
+.banner-jcwc {
+  display: block;
+  margin-top: 15px;
+  width: 100%;
+  height: 30px;
+  background-color: #850000; /*#6a0100;*/ /*#7b0300;*/
+}
+.banner-jcwc  a {
+  display: block;
+  background-image: url(../img/sns/sns_logo_jcwc.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-left: 40px;
+  line-height: 30px;
+  color: #fff;
+  /*text-shadow: 2px 2px 2px #000;*/
+  text-decoration: none;
+  /*font-size: 17px;*/
+  /*word-break: break-all;*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.banner-jcwc  a:hover,
+.banner-jcwc  a:active,
+.banner-jcwc  a:focus {
+  color: #f00;
+  text-decoration: underline;
+}
+
+/* 본문에 패딩 추가 */
+.col-content-inner {
+  padding: 15px !important;
+}
+
+/* 스크롤시 본문 패딩 추가 */
+.con-row-outer-padding {
+  padding: 70px 0px 20px 0px;
+}
+
+
+
+}
+/* 끝 */
+
+@media (min-width: 992px) {
+
+.navbar-form .form-control {
+  width: 200px; /* auto; */
+}
+
+/* 랩탑 및 PC용 헤더 */
+.header-outer {
+  display: block;
+  height: 92px;
+}
+.con-header {
+  padding: 0px;
+  height: 92px;
+  background-image: url(../img/main_image.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  /*border-top-right-radius: 5px;*/
+}
+/* 헤더 로고 */
+.header-title {
+  margin: 0px;
+  padding: 0px !important;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: -3px;
+  /*font-size: 35px;*/
+  /*line-height: 92px;*/
+}
+.header-title a span {
+  font-weight: 700;
+}
+.header-title a {
+  color: #000 !important;
+  text-decoration: none;
+  height: 92px;
+  line-height: 92px;
+  /*padding-top: 25px;*/
+  /*padding-bottom: 10px !important;*/
+  padding-left: 102px;
+  padding-right: 15px;
+  background-image: url(../img/svg/red2mtnk.svg); /* ../img/red2mtnk_large_sharp01.png */
+  background-repeat: no-repeat;
+  background-size: 92px 92px; /* contain */
+  background-position: 0px 0px;
+  display: inline-block;
+  /*border: 1px solid #f00;*/
+}
+.header-title a:hover,
+.header-title a:focus {
+  color: #f00 !important;
+  text-decoration: none;
+}
+
+
+/* 창 크기 늘릴시 작은 로고 제거 및 왼쪽 패딩 제거 */
+.navbar-header{
+  display: none;
+}
+.navbar > .container {
+  padding-left: 0px;
+}
+.navbar-collapse {
+  padding-left: 26.5%; /* 원래 25% 였으나 본문에 맞게 조정 */
+}
+
+
+/* 스크롤 내리면 랩탑 및 PC에서 로고 보이게 */
+.navbar-fixed .navbar-header{
+  display: block;
+  margin-left: 15px;
+}
+
+
+
+}
+
+
+@media (max-width: 1199px) {
+
+.con-header,
+.navbar > .container,
+.con-row {
+  width: 100%;
+}
+
+}
+
+@media (min-width: 1200px) {
+
+.con-header,
+.navbar > .container,
+.con-row {
+  width: 1170px; /*1170px;*/
+}
+
+/* PC에서 본문 그림자 추가 */
+.col-content-inner {
+  box-shadow: 2px 2px 0 0 rgba(0,0,0,0.07); /* 게임스팟 코드 */
+}
+
+
+}
+
+@media (min-width: 1500px) {
+
+/* 버그가 생기니 기존 미디어 쿼리를 건드리지 말고 값을 따로 준다 */
+/* https://www.concrete5.org/community/forums/customizing_c5/bootstrap-theme-how-to-use-custom-width-for-a-container */
+.con-header,
+.navbar > .container,
+.con-row {
+  width: 1280px;
+}
+
+}
+
+
+@media print {
+
+.col-content-inner {
+  padding: 0px !important;
+}
+
+}
+
+

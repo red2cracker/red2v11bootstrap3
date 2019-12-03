@@ -1,0 +1,244 @@
+@charset "utf-8";
+/* 새글 스킨 (latest) */
+
+.latest-row {
+  width: 100%;
+}
+.latest-row > div:first-child {
+  /*border: 1px solid #f00;*/
+  padding: 0px 15px 0px 15px;
+}
+.latest-row > div:last-child {
+  /*border: 1px solid #0f0;*/
+  padding: 0px 15px 0px 15px;
+}
+
+.latest-col {
+  position: relative;
+  margin-bottom: 20px;
+  /*border: 1px solid #000;*/
+}
+.latest-col > div > div {
+  /*background-color: #ddd;*/
+  border: 1px solid #c6cacc;
+}
+.latest-col > div > div > h2 {
+  margin: 0px;
+  font-size: 1.4em; /* 2.1rem; */ /* 17px; */
+  font-weight: bold;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e2e2e2;
+}
+/* font-size 2.0rem, 1.4em 이하는 폰트 크기 변경되는 버그 발생 */
+.latest-col > div > div > h2 > a {
+  display: block;
+  color: #253dbe;
+  text-decoration: none;
+  padding: 14px 15px; /* 14px 20px; */
+}
+.latest-col > div > div > h2 > a:hover {
+  color: #f00;
+  text-decoration: none;
+}
+/*
+.latest-col > div > div > h2 > a:before {
+  font-family: FontAwesome;
+  padding-right: 5px;
+}
+
+.latest-line-1 .latest-col:first-child > div > div > h2 > a:before {
+  content: "\f15b";
+}
+.latest-line-1 .latest-col:last-child > div > div > h2 > a:before {
+  content: "\f130";
+}
+
+.latest-line-2 .latest-col:first-child > div > div > h2 > a:before {
+  content: "\f086";
+}
+.latest-line-2 .latest-col:last-child > div > div > h2 > a:before {
+  content: "\f15b";
+}
+
+.latest-line-3 .latest-col:first-child > div > div > h2 > a:before {
+  content: "\f059";
+}
+.latest-line-3 .latest-col:last-child > div > div > h2 > a:before {
+  content: "\f0ad";
+}
+
+.latest-line-4 .latest-col:first-child > div > div > h2 > a:before {
+  content: "\f05a";
+}
+.latest-line-4 .latest-col:last-child > div > div > h2 > a:before {
+  content: "\f085";
+}
+
+.latest-line-5 .latest-col:first-child > div > div > h2 > a:before {
+  content: "\f11b";
+}
+.latest-line-5 .latest-col:last-child > div > div > h2 > a:before {
+  content: "\f03d";
+}
+*/
+
+.latest-col a.latest-more {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: block;
+  padding: 10px;
+  color: #253dbe;
+}
+.latest-col a.latest-more:hover {
+  color: #f00;
+  text-decoration: none;
+}
+
+.latest-col ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+.latest-col ul li {
+  position: relative;
+  font-size: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  /*line-height: 16px;*/
+}
+.latest-col ul li:last-child {
+  border-bottom: 0px;
+}
+
+
+/* https://www.w3.org/Style/Examples/007/color-bullets.en.html */
+/*
+.latest-col ul li:before {
+  content: "\2022";
+  color: #000;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+*/
+
+
+.latest-col ul li .latest-link a {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  padding: 5px 8px 5px 6px; /*12px;*/
+  /* 추가 */
+  width: calc(100% - 50px); /*85px*/ /*90px*/
+  white-space: nowrap;
+  overflow: hidden;
+  /*text-overflow: ellipsis;*/
+}
+.latest-col ul li .latest-link a:hover{
+  color: #f00;
+  text-decoration: none; /*underline;*/
+}
+
+.latest-col ul li .latest-cmt a {
+  position: absolute;
+  top: -1px;
+  right: 7px; /* right: 57px; */
+  display: block;
+  padding: 7px;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  /*line-height: 14px;*/
+}
+.latest-col ul li .latest-cmt a:before {
+  content: "(";
+  /*position: relative;
+  top: -1px;*/
+}
+.latest-col ul li .latest-cmt a:after {
+  content: ")";
+  /*position: relative;
+  top: -1px;*/
+}
+
+.latest-col ul li .latest-cmt a:hover {
+  color: #f00;
+  text-decoration: none;
+}
+
+.latest-col ul li .latest-date {
+  position: absolute;
+  top: 8px;
+  right: 6px;
+  color: #888;
+}
+
+.latest-col .latest-empty-li {
+  line-height: 155px;
+  /*color: #666;*/
+  text-align: center;
+  /*padding: 0;*/
+}
+
+.latest-col .new_icon {
+  margin-left: 5px;
+  padding: 1px 3px;
+  font-size: 14px;
+  background-color: #253dbe;
+  color: #fff;
+  border-radius: 2px;
+}
+.latest-col .new_icon:hover {
+  color: #f00;
+}
+
+
+@media (max-width: 767px) {
+
+.latest-line-1 .latest-col:first-child {
+  margin-top: 20px;
+}
+
+}
+
+
+@media (min-width: 768px) {
+
+.latest-row > div:first-child {
+  padding: 0px 10px 0px 0px;
+}
+.latest-row > div:last-child {
+  padding: 0px 0px 0px 10px;
+}
+
+}
+
+
+/*
+.lat {position:relative;margin-bottom:20px;overflow:hidden;border: 1px solid #c6cacc;background:#fff}
+.lat .lat_title {display:block;padding:0 20px;line-height:45px;font-size:1.083em;border-bottom:1px solid #e2e2e2;color:#253dbe;background:#fcfcfc}
+.lat .lat_title a{color:#253dbe;display:inline-block;position:relative}
+.lat .lat_title a:after{position:absolute;bottom:-1px;left:0;width:100%;height:2px;background:#253dbe;content:''}
+.lat ul{padding:15px 20px}
+.lat li {position:relative;line-height:18px;padding:3px 0;padding-right:50px;padding-left:10px}
+.lat li:before{position: absolute;top: 12px;left: 0px;width: 4px;height: 4px;background: #aaa;content: '';border-radius: 50%;}
+.lat li a:hover{color:#a22121}
+.lat li .fa-heart{color:#ff0000;}
+.lat li .fa-lock{display: inline-block;line-height: 14px;width: 16px;font-size: 0.833em;color: #4f818c;background: #cbe3e8;text-align: center;border-radius: 2px;font-size: 12px;border:1px solid #a2c6ce}
+.lat li .new_icon{display:inline-block;width: 16px;line-height:16px;font-size:0.833em;color:#ffff00;background:#6db142;text-align:center;border-radius: 2px;}
+.lat li .hot_icon{display:inline-block;width: 16px;line-height:16px ;font-size:0.833em;color:#fff;background:#e52955;text-align:center;border-radius: 2px;}
+.lat li .fa-caret-right{color:#bbb}
+.lat .lt_date{position:absolute;top:3px;right:0;color:#888}
+.lat  .empty_li{line-height:145px ;color:#666;text-align:center;padding:0;}
+.lat  .empty_li:before{background:none;padding:0}
+
+.lat .lt_cmt{background:#5c85c1;color:#fff; font-size:11px;height:16px;line-height:16px;padding:0 5px;border-radius:3px;
+-webkit-box-shadow: inset 0 2px 5px  rgba(255,255,255,0.4);
+-moz-box-shadow: inset 0 2px 5px  rgba(255,255,255,0.4);
+box-shadow: inset 0 2px 5px  rgba(255,255,255,0.4);}
+.lat .lt_more {position:absolute;top:11px;right:10px;display:block;width:25px;line-height:25px;color:#aaa;border-radius:3px;text-align:center;}
+.lat .lt_more:hover{color:#777}
+*/

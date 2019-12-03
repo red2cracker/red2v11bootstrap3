@@ -1,0 +1,81 @@
+.ind_page_links h1,
+.ind_page_rules h1,
+.ind_page_about_us h1,
+.ind_page_donation h1,
+.ind_page_staff h1,
+.ind_page_history h1,
+.ind_page_history h2,
+.ind_page_brand h1 {margin-top:0px;}
+.ind_page_links ul li a {display:inline-block;padding:2px;font-size:1.2em;}
+
+.ind_page_links a:link {color:#00f;}
+.ind_page_links a:visited {color:#00f;}
+.ind_page_links a:hover {color:#f00;}
+.ind_page_links a:active {color:#f00;}
+
+.ind_page_staff a:link {color:#00f;}
+.ind_page_staff a:visited {color:#00f;}
+.ind_page_staff a:hover {color:#f00;}
+.ind_page_staff a:active {color:#f00;}
+
+.ind_page_history a:link {color:#00f;}
+.ind_page_history a:visited {color:#00f;}
+.ind_page_history a:hover {color:#f00;}
+.ind_page_history a:active {color:#f00;}
+
+.ind_page_brand a:link {color:#00f;}
+.ind_page_brand a:visited {color:#00f;}
+.ind_page_brand a:hover {color:#f00;text-decoration:none;}
+.ind_page_brand a:active {color:#f00;text-decoration:none;}
+
+.ind_page_rules, .ind_page_about_us, .ind_page_donation, .ind_page_staff, .ind_page_history {font-size:1.1em;}
+.ind_page_rules ul,
+.ind_page_about_us ul,
+.ind_page_donation ul,
+#staff_old_member ul,
+#staff_sp_thanks ul,
+.ind_page_history ul {padding-left:20px;list-style:disc;}
+
+.ind_page_about_us .red2ci {border-radius:5px;}
+
+.ind_page_staff .staff_other {margin-top:15px;}
+
+.ind_page_history img {border:1px solid #000;}
+.ind_page_history img:hover, .ind_page_history img:active {border:1px solid #f00;}
+
+.ind_page_brand_down a {padding:5px;border:1px solid #ddd;}
+.ind_page_brand_down a:first-child {margin-right:10px;}
+
+@media (max-width: 767px) {
+.ind_page_links,
+.ind_page_rules,
+.ind_page_about_us,
+.ind_page_donation,
+.ind_page_staff,
+.ind_page_history,
+.ind_page_brand {padding:15px;} /* 모바일 여백 버그 수정하는 코드*/
+}
+
+@media (max-width: 425px) {
+
+.ind_page_staff .staff_left {margin-bottom:10px;}
+
+}
+
+@media (min-width: 426px) {
+
+.ind_page_staff .staff_row {width:100%;}
+.ind_page_staff .staff_row:after {clear:both;display:block;content:'';}
+.ind_page_staff .staff_left {float:left;width:160px;}
+.ind_page_staff .staff_body {float:left;width:calc(100% - 160px);}
+
+.ind_page_history .history_row {width:100%;}
+.ind_page_history .history_row:after {clear:both;display:block;content:'';}
+.ind_page_history .history_left {float:left;width:160px;}
+.ind_page_history .history_body {float:left;width:calc(100% - 160px);}
+
+}
+
+
+
+

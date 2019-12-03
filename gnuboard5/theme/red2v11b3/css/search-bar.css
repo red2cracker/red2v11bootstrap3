@@ -1,0 +1,63 @@
+/* 기존 디자인은 한글 입력시 버튼이 1px 내려가는 문제가 있어
+초기화 후 다시 스타일 입력함 */
+
+.navbar-search {
+  margin-top: 8px;
+}
+
+/* IE11 body 기본값과 충돌해서 별도의 값을 지정
+익스플로러 개발자 도구로 찾음 */
+.navbar-search .navbar-search-keyword,
+.navbar-search .navbar-search-submit {
+  border: none;
+  /*font-family: 'Nanum Gothic' !important;*/
+  font-size: 14px !important;
+  line-height: 1 !important;
+  /* inline-block 확대시 1px 위로 올라감 방지 */
+  vertical-align: bottom;
+}
+
+
+/* .navbar-search input[type=text] */
+.navbar-search .navbar-search-keyword {
+  width: 200px;
+  height: 34px;
+  padding: 0px 5px;
+  /* !important 를 추가해야 검색창 너비 변하는 트랜지션 작동 안함 */
+  -webkit-transition: none !important; /* for 크롬 */
+  transition: none !important; /* for IE */
+}
+.navbar-search .navbar-search-submit {
+  background-color: #2567fc;
+  color: #fff;
+  width: 40px;/*50px*/
+  height: 34px;
+}
+.navbar-search .navbar-search-submit:hover,
+.navbar-search .navbar-search-submit:focus,
+.navbar-search .navbar-search-submit:active {
+  color: #f00;
+  background-color: #2550fc;
+}
+
+
+@media (min-width: 768px) {
+
+.navbar-search .navbar-search-keyword {
+  width: 115px;
+}
+
+}
+
+@media (min-width: 992px) {
+
+.navbar-search .navbar-search-keyword {
+  width: 200px;
+}
+
+}
+
+
+
+
+
