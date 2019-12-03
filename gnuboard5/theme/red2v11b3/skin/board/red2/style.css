@@ -202,12 +202,14 @@
 
 @media (max-width: 767px) {
 
+
+/*
 .pg_wrap .pg_page:nth-last-child(3),
 .pg_wrap .pg_page:nth-last-child(4),
 .pg_wrap .pg_page:nth-last-child(5),
 .pg_wrap .pg_page:nth-last-child(6),
 .pg_wrap .pg_page:nth-last-child(7) {display:none;}
-
+*/
 }
 
 
