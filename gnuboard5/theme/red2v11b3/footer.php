@@ -20,7 +20,7 @@
 
     <p class="footer-contact">문의 및 연락처: red2cracker@gmail.com</p>
 
-    <p class="footer-copy">Copyright 2002-2019, <a href="http://red2.net/" title="Red2.net 홈">Red2.net</a>.</p>
+    <p class="footer-copy">Copyright 2002-2020, <a href="http://red2.net/" title="Red2.net 홈">Red2.net</a>.</p>
   </div>
 </footer>
 
