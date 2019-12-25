@@ -33,7 +33,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
     <aside id="login_info">
         <h2>회원로그인 안내</h2>
         <div>
-            <a href="./register.php"><i class="fa fa-sign-in" aria-hidden="true"></i> 회원가입</a>
+            <a href="./red2register.php"><i class="fa fa-sign-in" aria-hidden="true"></i> 회원가입</a>
             <a href="<?php echo G5_BBS_URL ?>/password_lost.php" target="_blank" id="login_password_lost"><i class="fa fa-unlock-alt" aria-hidden="true"></i> 아이디/비밀번호 찾기</a>
         </div>
     </aside>
@@ -42,6 +42,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 
 
 </div>
+
+<!-- red2register.php -->
 
 <script>
 $(function(){

@@ -29,7 +29,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$outlogin_skin_url.'/style.css">'
         </div>
         <div class="ol_auto_wr"> 
             <div id="ol_svc">
-                <a href="<?php echo G5_BBS_URL ?>/register.php"><i class="fa fa-sign-in" aria-hidden="true"></i> 회원가입</a>
+                <a href="<?php echo G5_BBS_URL ?>/red2register.php"><i class="fa fa-sign-in" aria-hidden="true"></i> 회원가입</a>
                 <a href="<?php echo G5_BBS_URL ?>/password_lost.php" id="ol_password_lost"><i class="fa fa-unlock-alt" aria-hidden="true"></i> 아이디/비번찾기</a>
             </div>
             <div id="ol_auto">
@@ -45,6 +45,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$outlogin_skin_url.'/style.css">'
     </fieldset>
     </form>
 </section>
+
+<!-- register.php -->
 
 <script>
 $omi = $('#ol_id');

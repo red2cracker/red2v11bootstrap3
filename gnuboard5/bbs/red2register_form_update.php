@@ -519,7 +519,7 @@ if ($w == '') {
         <meta charset="utf-8">
         <title>회원정보수정</title>
         <body>
-        <form name="fregisterupdate" method="post" action="'.G5_HTTP_BBS_URL.'/register_form.php">
+        <form name="fregisterupdate" method="post" action="'.G5_HTTP_BBS_URL.'/red2register_form.php">
         <input type="hidden" name="w" value="u">
         <input type="hidden" name="mb_id" value="'.$mb_id.'">
         <input type="hidden" name="mb_password" value="'.$tmp_password.'">
@@ -533,4 +533,6 @@ if ($w == '') {
         </html>';
     }
 }
+
+// register_form.php
 ?>

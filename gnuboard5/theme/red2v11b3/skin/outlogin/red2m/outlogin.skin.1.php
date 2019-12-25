@@ -10,8 +10,10 @@ add_stylesheet('<link rel="stylesheet" href="'.$outlogin_skin_url.'/style.css">'
     <h2>회원로그인</h2>
     <div id="ol_svc_m">
         <a href="<?php echo G5_BBS_URL ?>/login.php?url=<?=$urlencode?>"><i class="fa fa-power-off" aria-hidden="true"></i> 로그인</a> / 
-        <a href="<?php echo G5_BBS_URL ?>/register.php"><i class="fa fa-sign-in" aria-hidden="true"></i> 회원가입</a>
+        <a href="<?php echo G5_BBS_URL ?>/red2register.php"><i class="fa fa-sign-in" aria-hidden="true"></i> 회원가입</a>
     </div>
 </section>
+
+<!-- register.php -->
 
 <!-- } 로그인 전 모바일 아웃로그인 끝 -->

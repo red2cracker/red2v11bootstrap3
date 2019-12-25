@@ -25,10 +25,12 @@ add_stylesheet('<link rel="stylesheet" href="'.$outlogin_skin_url.'/style.css">'
         <li>
             <a href="<?php echo G5_BBS_URL ?>/logout.php?url=<?=$urlencode?>" id="ol_after_logout"><i class="fa fa-sign-out" aria-hidden="true"></i> 로그아웃</a>
 
-            &nbsp;<a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php" id="ol_after_info"><i class="fa fa-cog" aria-hidden="true"></i> 정보수정</a>
+            &nbsp;<a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=red2register_form.php" id="ol_after_info"><i class="fa fa-cog" aria-hidden="true"></i> 정보수정</a>
         </li>
     </ul>
 </section>
+
+<!-- register_form.php -->
 
 <script>
 // 탈퇴의 경우 아래 코드를 연동하시면 됩니다.
